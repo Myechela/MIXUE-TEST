@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiXue — карточки</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <svg class="corner" viewBox="0 0 40 40" role="img" aria-label="Иконка мороженого">
+    <rect width="40" height="40" rx="12" fill="#773344"/>
+    <path d="M13 21 L20 34 L27 21 Z" fill="#c2a878"/>
+    <path d="M15.5 25 L24.5 25 M17.5 29 L22.5 29" stroke="#773344" stroke-width="1.4" stroke-linecap="round"/>
+    <circle cx="20" cy="15.5" r="7.5" fill="#c2a878"/>
+    <circle cx="17.5" cy="14" r="1.2" fill="#773344" opacity=".45"/>
+    <circle cx="22.5" cy="16.5" r="1.2" fill="#773344" opacity=".45"/>
+  </svg>
+  <h1><span>MiXue</span> Карточки для заучивания кодов</h1>
+
+  <div class="bar tabs" id="modes">
+    <button data-m="cards" data-ic="cards" class="on">Карточки</button>
+    <button data-m="quiz" data-ic="quiz">Тест</button>
+    <button data-m="write" data-ic="write">Письмо</button>
+  </div>
+
+  <div class="bar" id="decks"></div>
+  <div class="settings">
+    <button class="chip" id="dir">Направление: Название → Код</button>
+    <button class="chip" id="onlyNew">Только невыученные: выкл</button>
+    <button class="btn" id="shuffle" data-ic="shuffle">Перемешать</button>
+    <button class="btn" id="reset" data-ic="reset">Сбросить прогресс</button>
+  </div>
+
+  <div class="progress"><i id="pbar"></i></div>
+  <div class="stat"><span id="pos"></span><span id="known"></span></div>
+
+  <div id="view"></div>
+
+  <div class="note">
+    Клавиши в режиме карточек: пробел — перевернуть, ← → — навигация, 1 — «Учу», 2 — «Знаю».<br>
+    Числа в кодах напитков — количество (г/мл) ингредиента. Одинаковые сокращения (например, ТП = «тапиока» и «тёплый») различай по контексту.
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
